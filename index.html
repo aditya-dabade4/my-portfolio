@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My W3Schools Style Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f1f1f1;
+      color: #000;
+    }
+    header {
+      padding: 60px 20px;
+      background: linear-gradient(120deg, #04AA6D, #036a4d);
+      color: white;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    header p {
+      font-size: 22px;
+      margin-top: 10px;
+    }
+    nav {
+      display: flex;
+      background-color: #222;
+      overflow: auto;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      flex: 1;
+      text-align: center;
+      padding: 14px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #04AA6D;
+      color: white;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: white;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+      color: #04AA6D;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      padding: 20px;
+      background-color: #e7f3ec;
+      border-left: 6px solid #04AA6D;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.03);
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    form button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    form button:hover {
+      background-color: #038f5a;
+    }
+    .profile-section {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .profile-section img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .resume-btn:hover {
+      background-color: #038f5a;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aditya Dabade</h1>
+    <p>Web Developer | Frontend Developer | Programmer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="profile-section">
+      <img src="ADITYA .jpg" alt="My Photo">
+      <div>
+        <p>Hello! I'm Aditya Dabade, a passionate and driven web developer. I specialize in crafting responsive, user-centric websites using modern tools and technologies. I love turning ideas into reality through code and continuously strive to learn and improve.</p>
+        <a href="Aditya Dabad1.pdf" class="resume-btn" target="_blank">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio site showcasing my work using modern web technologies and minimalistic design.</p>
+      </div>
+      <div class="project">
+        <h3>Task Manager App</h3>
+        <p>A simple to-do app using local storage and JS for effective task tracking and management.</p>
+      </div>
+     
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to work together or have any questions, feel free to reach out below:</p>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aditya Dabade. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Thank you for your message! I will get back to you soon.");
+    }
+  </script>
+</body>
+</html>
